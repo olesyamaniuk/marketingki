@@ -1,13 +1,5 @@
 $(function () {
-  const $slider = $(".i-r-reviews-list");
-
-  $slider.on("init reInit afterChange", function (event, slick, currentSlide) {
-    let i = (currentSlide ? currentSlide : 0) + 1;
-    let progress = (i / slick.slideCount) * 100;
-    $(".progress-fill").css("width", progress + "%");
-  });
-
-  $slider.slick({
+  $(".i-y-about-list").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -16,8 +8,9 @@ $(function () {
     autoplaySpeed: 3500,
     speed: 1000,
     dots: true,
+    centerMode: true,
     cssEase: "linear",
-    prevArrow: ".i-r-reviews-list-left",
-    nextArrow: ".i-r-reviews-list-right",
+    prevArrow: ".i-y-about-list-left",
+    nextArrow: ".i-y-about-list-right",
   });
 });
